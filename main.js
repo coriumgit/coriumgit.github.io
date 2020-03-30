@@ -1,4 +1,4 @@
-//import {PsychoJS} from './psychojs/js/core/PsychoJS';
+import {PsychoJS} from './psychojs/js/core/PsychoJS';
 
 document.querySelector("#startExpBtn").addEventListener("click", main);
 
