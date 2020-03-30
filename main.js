@@ -1,5 +1,5 @@
 import {PsychoJS} from './psychojs/js/core/PsychoJS';
 
-function main() {
+function run() {
     console.log("main called: " + String(PsychoJS.status));
 }
