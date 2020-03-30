@@ -2,31 +2,35 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport">        
+        <meta name="viewport" content="width=device-width">
 
-        <script type="module" src="./psychojs/js/core/PsychoJS.js"></script>
-        <script type="module" src="main.js"></script>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
 
-        <title>Web Experiment Template</title>      
-        
+        <script src="main.js"></script>
+
+        <title>Web Experiment Template</title>       
+
         <style>
-            div {
-                text-align:center
-            }
+            .formInput { display: block; width: 100%;}
+            html{font-family: arial;}
         </style>
     </head>
 
     <body>        
-        <div id="mainRect">
+        <div id="mainRect" style="display: none; margin: 0 auto; text-align: center;">
             <h1>Welcome to the experiment</h1>
             <p>To start press the button</p>            
-            <button id="startExp" width="110px" height="35px" font-size="18px" cursor="cursor" onClick="runExp">Start</button>
+            <button id="startExp" style="width: 110px; height: 35px; font-size:18px; cursor: pointer" onClick="runExp">Start</button>
         </div>        
     </body>
 </html>
 
 <script>
 function runExp() {
-    main.run();
+    main();
 }
+  
+
 </script>
