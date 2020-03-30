@@ -1,4 +1,4 @@
-import {PsychoJS} from './psychojs/js/core/PsychoJS';
+//import {PsychoJS} from './psychojs/js/core/PsychoJS';
 
 function main() {
     console.log("main called: " + String(PsychoJS.status));
