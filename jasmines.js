@@ -231,7 +231,7 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  bkg = new Rect({win : psychoJS.window, name : 'bkg', units : 'norm', pos: [0,0], size : [4,4], lineWidth : 0, depth: -1, fillColor : [0.8, 0.8, 0.8]});
+  bkg = new Rect({win : psychoJS.window, name : 'bkg', units : 'norm', pos: [0,0], size : [4,4], lineWidth : 0, depth: -1, fillColor : new Color([0.8, 0.8, 0.8]});
 
   key_press_feedback = new TextStim({
     win: psychoJS.window,
