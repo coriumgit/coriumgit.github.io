@@ -2,10 +2,10 @@
  * Sequence Training *
  *********************/
 
-import { PsychoJS } from './lib/core-2020.1.js';
-import * as core from './lib/core-2020.1.js';
-import { TrialHandler } from './lib/data-2020.1.js';
-import { Scheduler } from './lib/util-2020.1.js';
+import { PsychoJS } from './lib/core/PsychoJS.js';
+import { Keyboard } from './lib/core/Keyboard.js';
+import { TrialHandler } from './lib/data/TrialHandler.js';
+import { Scheduler } from './lib/util/Scheduler.js';
 import * as util from './lib/util-2020.1.js';
 import * as visual from './lib/visual-2020.1.js';
 
@@ -127,7 +127,7 @@ var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "Instructions1"
   Instructions1Clock = new util.Clock();
-  Key_Instructions = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  Key_Instructions = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   Instructions_1 = new visual.ImageStim({
     win : psychoJS.window,
@@ -149,7 +149,7 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "Instructions3"
   Instructions3Clock = new util.Clock();
@@ -162,7 +162,7 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp_2 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp_2 = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "Instructions4"
   Instructions4Clock = new util.Clock();
@@ -175,7 +175,7 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp_3 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp_3 = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "Instructions5"
   Instructions5Clock = new util.Clock();
@@ -188,7 +188,7 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp_4 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp_4 = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "Instructions6"
   Instructions6Clock = new util.Clock();
@@ -201,7 +201,7 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp_5 = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp_5 = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "trial"
   trialClock = new util.Clock();
@@ -240,7 +240,7 @@ function experimentInit() {
     depth: -1.0 
   });
   
-  Key_Response = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  Key_Response = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Initialize components for Routine "The_End"
   The_EndClock = new util.Clock();
