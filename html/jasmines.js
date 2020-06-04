@@ -78,6 +78,10 @@ dialogCancelScheduler.add(quitPsychoJS, '', false);
 psychoJS.start({
   expName: expName,
   expInfo: expInfo,
+  resources: [
+    {'name':'Instructions_1', 'path': 'Pic_1.jpeg'}
+
+  ]
   });
 
 
