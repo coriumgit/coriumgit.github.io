@@ -136,8 +136,8 @@ function experimentInit() {
   Key_Instructions = new Keyboard({psychoJS: psychoJS, clock: new Clock(), waitForStart: true});
   
   Instructions_1 = new ImageStim({
-    win : psychoJS.window, //name : 'Instructions_1', 
-    units : undefined, 
+    win : psychoJS.window,
+    name : 'Instructions_1', units : undefined, 
     image : 'Pic_1.jpeg', mask : undefined,
     ori : 0, pos : [0, 0], size : [1.8, 1],
     color : new Color([1, 1, 1]), opacity : 1,
