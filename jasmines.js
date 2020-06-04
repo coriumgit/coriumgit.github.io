@@ -2,7 +2,7 @@
  * Sequence Training *
  *********************/
 
-import { PsychoJS } from './lib/core/PsychoJS';
+import { PsychoJS } from './lib/core/PsychoJS.js';
 import { Keyboard } from './lib/core/Keyboard';
 import { TrialHandler } from './lib/data/TrialHandler';
 import { Scheduler } from './lib/util/Scheduler';
