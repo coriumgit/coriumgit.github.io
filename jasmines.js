@@ -231,7 +231,7 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  bkg = new Rect({win : psychoJS.window, name : 'bkg', units : 'norm', pos: [0,0], size : [4,4], lineWidth : 0, depth: -1});
+  bkg = new Rect({win : psychoJS.window, name : 'bkg', units : 'norm', pos: [0,0], size : [4,4], lineWidth : 0, depth: -1, fillColor : [0.8, 0.8, 0.8]});
 
   key_press_feedback = new TextStim({
     win: psychoJS.window,
@@ -999,10 +999,10 @@ function trialRoutineBegin(trials) {
     frameN = -1;
     // update component parameters for each repeat
     if (Sequences == 41324) {
-      bkg.fillColor = new Color([0.0, 0.8, 0.0]);
+      //bkg.fillColor = new Color([0.8, 0.8, 0.8]);
     }
     else {
-      bkg.fillColor = new Color([0.0, 0.0, 0.4]);
+      //bkg.fillColor = new Color([0.8, 0.8, 0.8]);
     }
 
     Sequenes_Visual.setText(Sequences);
