@@ -79,8 +79,12 @@ psychoJS.start({
   expName: expName,
   expInfo: expInfo,
   resources: [
-    {'name':'Pic_1.jpeg', 'path': 'resources/Pic_1.jpeg'}
-
+    {'name':'Pic_1.jpeg', 'path': 'resources/Pic_1.jpeg'},
+    {'name':'Pic_2.jpeg', 'path': 'resources/Pic_2.jpeg'},
+    {'name':'Pic_3.jpeg', 'path': 'resources/Pic_3.jpeg'},
+    {'name':'Pic_4.jpeg', 'path': 'resources/Pic_4.jpeg'},
+    {'name':'Pic_5.jpeg', 'path': 'resources/Pic_5.jpeg'},
+    {'name':'Pic_6.jpeg', 'path': 'resources/Pic_6.jpeg'}
   ]
   });
 
