@@ -998,7 +998,7 @@ function trialRoutineBegin(trials) {
     trialClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    if (Sequences.localeCompare("4 1 3 2 4") == 0) {
+    if (Sequences == 41324) {
       bkg.fillColor = new Color([0.0, 0.8, 0.0]);
     }
     else {
