@@ -2,12 +2,18 @@
  * Sequence Training *
  *********************/
 
-import { PsychoJS } from './lib/core/PsychoJS.js';
-import { Keyboard } from './lib/core/Keyboard.js';
-import { TrialHandler } from './lib/data/TrialHandler.js';
-import { Scheduler } from './lib/util/Scheduler.js';
-import * as util from './lib/util-2020.1.js';
-import * as visual from './lib/visual-2020.1.js';
+import { PsychoJS } from './lib/core/PsychoJS';
+import { Keyboard } from './lib/core/Keyboard';
+import { TrialHandler } from './lib/data/TrialHandler';
+import { Scheduler } from './lib/util/Scheduler';
+import { Color } from './lib/util/Color';
+import { Clock } from './lib/util/Clock'
+import { MonotonicClock } from './lib/util/Clock';
+import { CountdownTimer } from './lib/util/Clock'
+import { addInfoFromUrl } from './lib/util/Util';
+import { ImageStim } from './lib/visual/ImageStim'
+import { TextStim } from './lib/visual/TextStim'
+import { Rect } from './lib/visual/Rect'
 
 // init psychoJS:
 const psychoJS = new PsychoJS({
@@ -17,7 +23,7 @@ const psychoJS = new PsychoJS({
 // open window:
 psychoJS.openWindow({
   fullscr: true,
-  color: new util.Color([0, 0, 0]),
+  color: new Color([0, 0, 0]),
   units: 'height',
   waitBlanking: true
 });
@@ -77,7 +83,7 @@ psychoJS.start({
 
 var frameDur;
 function updateInfo() {
-  expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
+  expInfo['date'] = MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
   expInfo['psychopyVersion'] = '2020.1.3';
   expInfo['OS'] = window.navigator.platform;
@@ -90,7 +96,7 @@ function updateInfo() {
     frameDur = 1.0 / 60.0; // couldn't get a reliable measure so guess
 
   // add info from the URL:
-  util.addInfoFromUrl(expInfo);
+  addInfoFromUrl(expInfo);
   
   return Scheduler.Event.NEXT;
 }
@@ -126,138 +132,138 @@ var globalClock;
 var routineTimer;
 function experimentInit() {
   // Initialize components for Routine "Instructions1"
-  Instructions1Clock = new util.Clock();
-  Key_Instructions = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  Instructions1Clock = new Clock();
+  Key_Instructions = new Keyboard({psychoJS: psychoJS, clock: new Clock(), waitForStart: true});
   
-  Instructions_1 = new visual.ImageStim({
+  Instructions_1 = new ImageStim({
     win : psychoJS.window,
     name : 'Instructions_1', units : undefined, 
     image : 'Pic_1.jpeg', mask : undefined,
     ori : 0, pos : [0, 0], size : [1.8, 1],
-    color : new util.Color([1, 1, 1]), opacity : 1,
+    color : new Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
   // Initialize components for Routine "Instructions2"
-  Instructions2Clock = new util.Clock();
-  Instructions_2 = new visual.ImageStim({
+  Instructions2Clock = new Clock();
+  Instructions_2 = new ImageStim({
     win : psychoJS.window,
     name : 'Instructions_2', units : undefined, 
     image : 'Pic_2.jpeg', mask : undefined,
     ori : 0, pos : [0, 0], size : [1.8, 1],
-    color : new util.Color([1, 1, 1]), opacity : 1,
+    color : new Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp = new Keyboard({psychoJS: psychoJS, clock: new Clock(), waitForStart: true});
   
   // Initialize components for Routine "Instructions3"
-  Instructions3Clock = new util.Clock();
-  Instructions_3 = new visual.ImageStim({
+  Instructions3Clock = new Clock();
+  Instructions_3 = new ImageStim({
     win : psychoJS.window,
     name : 'Instructions_3', units : undefined, 
     image : 'Pic_3.jpeg', mask : undefined,
     ori : 0, pos : [0, 0], size : [1.8, 1],
-    color : new util.Color([1, 1, 1]), opacity : 1,
+    color : new Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp_2 = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp_2 = new Keyboard({psychoJS: psychoJS, clock: new Clock(), waitForStart: true});
   
   // Initialize components for Routine "Instructions4"
-  Instructions4Clock = new util.Clock();
-  Instructions_4 = new visual.ImageStim({
+  Instructions4Clock = new Clock();
+  Instructions_4 = new ImageStim({
     win : psychoJS.window,
     name : 'Instructions_4', units : undefined, 
     image : 'Pic_4.jpeg', mask : undefined,
     ori : 0, pos : [0, 0], size : [1.8, 1],
-    color : new util.Color([1, 1, 1]), opacity : 1,
+    color : new Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp_3 = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp_3 = new Keyboard({psychoJS: psychoJS, clock: new Clock(), waitForStart: true});
   
   // Initialize components for Routine "Instructions5"
-  Instructions5Clock = new util.Clock();
-  Instructions_5 = new visual.ImageStim({
+  Instructions5Clock = new Clock();
+  Instructions_5 = new ImageStim({
     win : psychoJS.window,
     name : 'Instructions_5', units : undefined, 
     image : 'Pic_5.jpeg', mask : undefined,
     ori : 0, pos : [0, 0], size : [1.8, 1],
-    color : new util.Color([1, 1, 1]), opacity : 1,
+    color : new Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp_4 = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp_4 = new Keyboard({psychoJS: psychoJS, clock: new Clock(), waitForStart: true});
   
   // Initialize components for Routine "Instructions6"
-  Instructions6Clock = new util.Clock();
-  Instructions_6 = new visual.ImageStim({
+  Instructions6Clock = new Clock();
+  Instructions_6 = new ImageStim({
     win : psychoJS.window,
     name : 'Instructions_6', units : undefined, 
     image : 'Pic_6.jpeg', mask : undefined,
     ori : 0, pos : [0, 0], size : [1.8, 1],
-    color : new util.Color([1, 1, 1]), opacity : 1,
+    color : new Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
-  key_resp_5 = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  key_resp_5 = new Keyboard({psychoJS: psychoJS, clock: new Clock(), waitForStart: true});
   
   // Initialize components for Routine "trial"
-  trialClock = new util.Clock();
-  Sequenes_Visual = new visual.TextStim({
+  trialClock = new Clock();
+  Sequenes_Visual = new TextStim({
     win: psychoJS.window,
     name: 'Sequenes_Visual',
     text: 'default text',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new Color('white'),  opacity: 1,
     depth: 0.0 
   });
   
-  bkg = new visual.Rect({win : psychoJS.window, name : 'bkg', units : 'norm', pos: [0,0], size : [4,4], lineWidth : 0, depth: -1});
+  bkg = new Rect({win : psychoJS.window, name : 'bkg', units : 'norm', pos: [0,0], size : [4,4], lineWidth : 0, depth: -1});
 
-  key_press_feedback = new visual.TextStim({
+  key_press_feedback = new TextStim({
     win: psychoJS.window,
     name: 'Sequenes_Visual',
     text: 'default text',
     font: 'Arial',
     units: undefined,     
     pos: [-0.5, 0.4], height: 0.05, wrapWidth: 0.1, alignText:'center', ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new Color('white'),  opacity: 1,
     depth: 0.0 
   });
 
-  Trail_Break = new visual.TextStim({
+  Trail_Break = new TextStim({
     win: psychoJS.window,
     name: 'Trail_Break',
     text: '',
     font: 'Arial',
     units: undefined, 
     pos: [0,0], height: 0.06,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new Color('white'),  opacity: 1,
     depth: -1.0 
   });
   
-  Key_Response = new Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  Key_Response = new Keyboard({psychoJS: psychoJS, clock: new Clock(), waitForStart: true});
   
   // Initialize components for Routine "The_End"
-  The_EndClock = new util.Clock();
-  Text_The_End = new visual.TextStim({
+  The_EndClock = new Clock();
+  Text_The_End = new TextStim({
     win: psychoJS.window,
     name: 'Text_The_End',
     text: 'The End',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('white'),  opacity: 1,
+    color: new Color('white'),  opacity: 1,
     depth: 0.0 
   });
   
   // Create some handy timers
-  globalClock = new util.Clock();  // to track the time since experiment started
-  routineTimer = new util.CountdownTimer();  // to track time remaining of each (non-slip) routine
+  globalClock = new Clock();  // to track the time since experiment started
+  routineTimer = new CountdownTimer();  // to track time remaining of each (non-slip) routine
   
   return Scheduler.Event.NEXT;
 }
@@ -984,10 +990,10 @@ function trialRoutineBegin(trials) {
     frameN = -1;
     // update component parameters for each repeat
     if (Sequences.localeCompare("4 1 3 2 4") == 0) {
-      bkg.fillColor = new util.Color([0.0, 0.8, 0.0]);
+      bkg.fillColor = new Color([0.0, 0.8, 0.0]);
     }
     else {
-      bkg.fillColor = new util.Color([0.0, 0.0, 0.4]);
+      bkg.fillColor = new Color([0.0, 0.0, 0.4]);
     }
 
     Sequenes_Visual.setText(Sequences);
