@@ -84,7 +84,8 @@ psychoJS.start({
     {'name':'Pic_3.jpeg', 'path': 'resources/Pic_3.jpeg'},
     {'name':'Pic_4.jpeg', 'path': 'resources/Pic_4.jpeg'},
     {'name':'Pic_5.jpeg', 'path': 'resources/Pic_5.jpeg'},
-    {'name':'Pic_6.jpeg', 'path': 'resources/Pic_6.jpeg'}
+    {'name':'Pic_6.jpeg', 'path': 'resources/Pic_6.jpeg'},
+    {'name':'Protocol.xlsx', 'path': 'resources/Protocol.xlsx'}    
   ]
   });
 
