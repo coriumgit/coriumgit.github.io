@@ -3,17 +3,17 @@
  *********************/
 
 import { PsychoJS } from './lib/core/PsychoJS.js';
-import { Keyboard } from './lib/core/Keyboard';
-import { TrialHandler } from './lib/data/TrialHandler';
-import { Scheduler } from './lib/util/Scheduler';
-import { Color } from './lib/util/Color';
-import { Clock } from './lib/util/Clock'
-import { MonotonicClock } from './lib/util/Clock';
-import { CountdownTimer } from './lib/util/Clock'
-import { addInfoFromUrl } from './lib/util/Util';
-import { ImageStim } from './lib/visual/ImageStim'
-import { TextStim } from './lib/visual/TextStim'
-import { Rect } from './lib/visual/Rect'
+import { Keyboard } from './lib/core/Keyboard.js';
+import { TrialHandler } from './lib/data/TrialHandler.js';
+import { Scheduler } from './lib/util/Scheduler.js';
+import { Color } from './lib/util/Color.js';
+import { Clock } from './lib/util/Clock.js'
+import { MonotonicClock } from './lib/util/Clock.js';
+import { CountdownTimer } from './lib/util/Clock.js'
+import { addInfoFromUrl } from './lib/util/Util.js';
+import { ImageStim } from './lib/visual/ImageStim.js'
+import { TextStim } from './lib/visual/TextStim.js'
+import { Rect } from './lib/visual/Rect.js'
 
 // init psychoJS:
 const psychoJS = new PsychoJS({
