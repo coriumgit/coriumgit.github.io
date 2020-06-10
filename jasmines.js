@@ -231,7 +231,15 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  bkg = new Rect({win : psychoJS.window, name : 'bkg', units : 'norm', pos: [0,0], size : [4,4], lineWidth : 0, depth: -1, fillColor : new Color([0.6, 0.6, 0.6])});
+  bkg = new Rect({
+    win : psychoJS.window, 
+    name : 'bkg', 
+    units : 'norm', 
+    pos: [0,0], 
+    size : [4,4], 
+    lineWidth : 0, 
+    depth: -1, 
+    fillColor : new Color([1.0, 1.0, 1.0])});
 
   key_press_feedback = new TextStim({
     win: psychoJS.window,
@@ -955,7 +963,7 @@ function Instructions6RoutineEnd(trials) {
   };
 }
 
-
+var lastSequence;
 var trials;
 var currentLoop;
 function trialsLoopBegin(thisScheduler) {
@@ -980,6 +988,8 @@ function trialsLoopBegin(thisScheduler) {
     thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
   }
 
+  lastSequence = trials.getCurrentTrial().Sequences
+
   return Scheduler.Event.NEXT;
 }
 
@@ -990,6 +1000,7 @@ function trialsLoopEnd() {
   return Scheduler.Event.NEXT;
 }
 
+var flashTime;
 var trialComponents;
 function trialRoutineBegin(trials) {
   return function () {
@@ -998,11 +1009,12 @@ function trialRoutineBegin(trials) {
     trialClock.reset(); // clock
     frameN = -1;
     // update component parameters for each repeat
-    if (Sequences == 41324) {
-      //bkg.fillColor = new Color([0.8, 0.8, 0.8]);
+    if (Sequences != lastSequence) {
+      flashTime = 0.05;
+      lastSequence = Sequences;
     }
     else {
-      //bkg.fillColor = new Color([0.8, 0.8, 0.8]);
+      flashTime = 0.0;
     }
 
     Sequenes_Visual.setText(Sequences);
@@ -1044,14 +1056,19 @@ function trialRoutineEachFrame(trials) {
       Sequenes_Visual.tStart = t;  // (not accounting for frame time here)
       Sequenes_Visual.frameNStart = frameN;  // exact frame index
             
-      bkg.setAutoDraw(true);
+      bkg.setAutoDraw(true);      
+    }
+
+    frameRemains = flashTime - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (Sequenes_Visual.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      bkg.setAutoDraw(false);
       Sequenes_Visual.setAutoDraw(true);
       key_press_feedback.setAutoDraw(true);
       key_press_feedback.pos = [-0.5, 0.4];
-      txtHorizonIndent = 0.00965;
+      txtHorizonIndent = 0.00965; 
     }
 
-    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = flashTime + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (Sequenes_Visual.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       Sequenes_Visual.setAutoDraw(false);
       key_press_feedback.setAutoDraw(false);
