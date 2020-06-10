@@ -1068,21 +1068,21 @@ function trialRoutineEachFrame(trials) {
       txtHorizonIndent = 0.00965; 
     }
 
-    frameRemains = flashTime + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = flashTime + 4 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (Sequenes_Visual.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       Sequenes_Visual.setAutoDraw(false);
       key_press_feedback.setAutoDraw(false);
     }
     
     // *Trail_Break* updates
-    if (t >= 10 && Trail_Break.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= flashTime + 4 && Trail_Break.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       Trail_Break.tStart = t;  // (not accounting for frame time here)
       Trail_Break.frameNStart = frameN;  // exact frame index            
       Trail_Break.setAutoDraw(true);
     }
 
-    frameRemains = 10 + BreakTime - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = flashTime + 4 + BreakTime - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (Trail_Break.status === PsychoJS.Status.STARTED) {
       if (t < frameRemains) {
         Trail_Break.setText("Break: " + Math.ceil(BreakTime - (t - Trail_Break.tStart)) + " Seconds Remaining");    
@@ -1104,7 +1104,7 @@ function trialRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function() { Key_Response.clearEvents(); });
     }
 
-    frameRemains = 0.0 + 10 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = flashTime + 4 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (Key_Response.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       Key_Response.status = PsychoJS.Status.FINISHED;
   }
