@@ -988,7 +988,7 @@ function trialsLoopBegin(thisScheduler) {
     thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
   }
 
-  lastSequence = trials.getCurrentTrial().Sequences
+  lastSequence = trials.getCurrentTrial().Sequences;
 
   return Scheduler.Event.NEXT;
 }
@@ -1060,7 +1060,7 @@ function trialRoutineEachFrame(trials) {
     }
 
     frameRemains = flashTime - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (Sequenes_Visual.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+    if (t >= frameRemains && Sequenes_Visual.status === PsychoJS.Status.NOT_STARTED) {
       bkg.setAutoDraw(false);
       Sequenes_Visual.setAutoDraw(true);
       key_press_feedback.setAutoDraw(true);
