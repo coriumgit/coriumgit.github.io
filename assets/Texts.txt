@@ -1,0 +1,7 @@
+---‐‐-----------‐‐-----------‐‐-----------‐‐-------------
+An educational escape room type puzzle game. Examine the clues arround the room to workout a chimical formula of a cure to your cat &#128049;
+
+To drive the game logic, I designed a class hierarchy that generalizes this genre of puzzle games. Description under 'more details'...
+
+Glossary:
+Brace: Hold in hand. That is, the player selected the tool to be used. On next click - use the tool on the clicked object.
